@@ -1,1 +1,1 @@
-# ultimate-modpack
+# mod-template
