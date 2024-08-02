@@ -17,9 +17,11 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> ALEXANDRITE_SMELTABLES = List.of(ModItems.RAW_ALEXANDRITE.get(),
-            ModBlocks.ALEXANDRITE_ORE.get(), ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), ModBlocks.NETHER_ALEXANDRITE_ORE.get(),
-            ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
+    private static final List<ItemLike> ALEXANDRITE_SMELTABLES = List.of(
+            ModItems.RAW_ALEXANDRITE.get(),
+            ModBlocks.ALEXANDRITE_ORE.get(),
+            ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get()
+    );
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -97,7 +99,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.ALEXANDRITE_BLOCK.get()).build()))
                 .save(pWriter);
 
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(), RecipeCategory.MISC, ModBlocks.RAW_ALEXANDRITE_BLOCK.get(),
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC,
+                ModItems.RAW_ALEXANDRITE.get(),
+                RecipeCategory.MISC,
+                ModBlocks.ALEXANDRITE_BLOCK.get(),
                 "alexandriteore:raw_alexandrite", "alexandrite","alexandriteore:raw_alexandrite_block", "alexandrite");
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite");
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100, "alexandrite");
