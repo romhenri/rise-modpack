@@ -15,18 +15,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ALEXANDRITE_DUST = ITEMS.register("alexandrite_dust",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 4, -1.2F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, 1, 2, new Item.Properties().durability(256)));
+            () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, 3, -2.8F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
-            () -> new ShovelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+            () -> new ShovelItem(ModToolTiers.ALEXANDRITE, 3, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_AXE = ITEMS.register("alexandrite_axe",
-            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 6, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
-            () -> new HoeItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
-
+            () -> new HoeItem(ModToolTiers.ALEXANDRITE, 3, -1.0F, new Item.Properties().durability(1717)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

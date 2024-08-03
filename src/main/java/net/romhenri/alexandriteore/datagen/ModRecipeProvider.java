@@ -29,6 +29,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.ALEXANDRITE.get()),
+                        RecipeCategory.MISC, ModItems.ALEXANDRITE_DUST.get(), 0.5f, 300)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter, AlexandriteOreMod.MOD_ID + ":alexandrite_dust_from_smelting");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.ALEXANDRITE.get()),
+                        RecipeCategory.MISC, ModItems.ALEXANDRITE_DUST.get(), 0.5f, 300)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter, AlexandriteOreMod.MOD_ID + ":alexandrite_dust_from_blasting");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -100,7 +113,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC,
-                ModItems.RAW_ALEXANDRITE.get(),
+                ModItems.ALEXANDRITE.get(),
                 RecipeCategory.MISC,
                 ModBlocks.ALEXANDRITE_BLOCK.get(),
                 "alexandriteore:raw_alexandrite", "alexandrite","alexandriteore:raw_alexandrite_block", "alexandrite");

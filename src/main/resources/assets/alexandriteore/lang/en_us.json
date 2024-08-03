@@ -1,6 +1,7 @@
 {
   "item.alexandriteore.alexandrite": "Alexandrite",
   "item.alexandriteore.raw_alexandrite": "Raw Alexandrite",
+  "item.alexandriteore.alexandrite_dust": "Alexandrite Dust",
 
   "item.alexandriteore.alexandrite_axe": "Alexandrite Axe",
   "item.alexandriteore.alexandrite_hoe": "Alexandrite Hoe",
@@ -9,12 +10,9 @@
   "item.alexandriteore.alexandrite_sword": "Alexandrite Sword",
 
   "block.alexandriteore.alexandrite_block": "Block of Alexandrite",
-  "block.alexandriteore.raw_alexandrite_block": "Block of Raw Alexandrite",
 
   "block.alexandriteore.alexandrite_ore": "Alexandrite Ore",
   "block.alexandriteore.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
-  "block.alexandriteore.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
-  "block.alexandriteore.nether_alexandrite_ore": "Nether Alexandrite Ore",
 
   "creativetab.course_tab": "Course Tab"
 }
