@@ -3,6 +3,7 @@ package net.romhenri.alexandriteore;
 import com.mojang.logging.LogUtils;
 import net.romhenri.alexandriteore.block.ModBlocks;
 import net.romhenri.alexandriteore.item.ModCreativeModeTabs;
+import net.romhenri.alexandriteore.loot.ModLootModifiers;
 import net.romhenri.alexandriteore.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,6 +32,7 @@ public class AlexandriteOreMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
