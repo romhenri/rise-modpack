@@ -19,7 +19,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 4, -1.2F, new Item.Properties().durability(1717)));
+            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 4, -0.8F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, 3, -2.8F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
