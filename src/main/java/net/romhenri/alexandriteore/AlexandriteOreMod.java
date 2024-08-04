@@ -48,10 +48,24 @@ public class AlexandriteOreMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
+            event.accept(ModItems.ALEXANDRITE_DUST);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.ALEXANDRITE_SWORD);
+            event.accept(ModItems.ALEXANDRITE_PICKAXE);
+            event.accept(ModItems.ALEXANDRITE_SHOVEL);
+            event.accept(ModItems.ALEXANDRITE_AXE);
+            event.accept(ModItems.ALEXANDRITE_HOE);
         }
     }
 

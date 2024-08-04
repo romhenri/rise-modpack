@@ -14,9 +14,9 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AlexandriteOreMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> COURSE_TAB = CREATIVE_MODE_TABS.register("course_tab",
+    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_TAB = CREATIVE_MODE_TABS.register("alexandrite_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
-                    .title(Component.translatable("creativetab.course_tab"))
+                    .title(Component.translatable("creativetab.alexandrite_tab"))
                     .displayItems((displayParameters, output) -> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
@@ -33,7 +33,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
                     }).build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
