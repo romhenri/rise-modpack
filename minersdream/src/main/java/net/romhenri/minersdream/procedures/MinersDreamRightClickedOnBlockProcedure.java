@@ -22,9 +22,26 @@ public class MinersDreamRightClickedOnBlockProcedure {
     public static void execute(LevelAccessor world, int x, int y, int z, Entity entity) {
         if (entity == null || !(world instanceof ServerLevel serverLevel)) return;
 
+        if (!serverLevel.dimension().equals(Level.OVERWORLD)) {
+            return;
+        }
+
+        if (y < 0) { y--; }
+
+        Vec3 viewVector = entity.getLookAngle();
+        boolean lookingNegativeZ = viewVector.z < 0;
+
+        String[] blocksToReplace = {
+                "minecraft:stone", "minecraft:gravel", "minecraft:lava", "minecraft:water", "minecraft:granite",
+                "minecraft:andesite", "minecraft:diorite", "minecraft:dirt", "minecraft:netherrack", "minecraft:end_stone",
+                "minecraft:basalt", "minecraft:blackstone", "minecraft:deepslate", "minecraft:tuff", "minecraft:calcite",
+                "minecraft:dripstone_block", "minecraft:moss_block", "minecraft:clay", "minecraft:smooth_basalt",
+                "minecraft:cobblestone"
+        };
+
         CommandSourceStack commandSourceStack = new CommandSourceStack(
                 CommandSource.NULL,
-                new Vec3(x, y, z),
+                new Vec3(x-1, y, z),
                 Vec2.ZERO,
                 serverLevel,
                 4,
@@ -34,31 +51,27 @@ public class MinersDreamRightClickedOnBlockProcedure {
                 entity
         );
 
-        String[] blocksToReplace = {
-                "minecraft:stone", "minecraft:gravel", "minecraft:lava", "minecraft:water", "minecraft:granite",
-                "minecraft:andesite", "minecraft:diorite", "minecraft:dirt", "minecraft:netherrack", "minecraft:end_stone",
-                "minecraft:basalt", "minecraft:blackstone", "minecraft:deepslate", "minecraft:tuff", "minecraft:calcite",
-                "minecraft:dripstone_block", "minecraft:moss_block", "minecraft:clay", "minecraft:smooth_basalt",
-                "minecraft:cobblestone" // Adicionado cobblestone à lista de substituição
-        };
+        String fillCommand = lookingNegativeZ
+                ? "fill ~5 ~-1 ~ ~-5 ~5 ~-50 minecraft:air replace %s"
+                : "fill ~5 ~-1 ~ ~-5 ~5 ~50 minecraft:air replace %s";
+        String cobblestoneCommand = lookingNegativeZ
+                ? "fill ~5 ~-2 ~ ~-5 ~-2 ~-50 minecraft:cobblestone replace minecraft:air"
+                : "fill ~5 ~-2 ~ ~-5 ~-2 ~50 minecraft:cobblestone replace minecraft:air";
 
-        // Replacing
         for (String block : blocksToReplace) {
             serverLevel.getServer().getCommands().performPrefixedCommand(
-                    commandSourceStack, String.format("fill ~5 ~-1 ~ ~-5 ~5 ~50 minecraft:air replace %s", block)
+                    commandSourceStack, String.format(fillCommand, block)
             );
         }
 
         // Cobblestone
         serverLevel.getServer().getCommands().performPrefixedCommand(
-                commandSourceStack, "fill ~5 ~-2 ~ ~-5 ~-2 ~50 minecraft:cobblestone replace minecraft:air"
+                commandSourceStack, cobblestoneCommand
         );
 
-        // Torches
-        for (int i = 5; i <= 45; i += 5) {
-            serverLevel.getServer().getCommands().performPrefixedCommand(
-                    commandSourceStack, String.format("setblock ~ ~-1 ~%d minecraft:torch", i)
-            );
+        for (int i = 6; i <= 48; i += 6) {
+            String torchCommand = String.format("setblock ~ ~-1 ~%d minecraft:torch", lookingNegativeZ ? -i : i);
+            serverLevel.getServer().getCommands().performPrefixedCommand(commandSourceStack, torchCommand);
         }
 
         playExplosionSound(world, x, y, z);
@@ -73,6 +86,19 @@ public class MinersDreamRightClickedOnBlockProcedure {
                     level.playSound(null, new BlockPos(x, y, z), explosionSound, SoundSource.NEUTRAL, 1.0F, 1.0F);
                 } else {
                     level.playLocalSound(x, y, z, explosionSound, SoundSource.NEUTRAL, 1.0F, 1.0F, false);
+                }
+            }
+        }
+    }
+
+    private static void playFailureSound(LevelAccessor world, int x, int y, int z) {
+        if (world instanceof Level level) {
+            SoundEvent failureSound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("yourmod:explosion_failure"));
+            if (failureSound != null) {
+                if (!level.isClientSide()) {
+                    level.playSound(null, new BlockPos(x, y, z), failureSound, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                } else {
+                    level.playLocalSound(x, y, z, failureSound, SoundSource.NEUTRAL, 1.0F, 1.0F, false);
                 }
             }
         }
