@@ -1,7 +1,7 @@
-package net.romhenri.testmod.block;
+package net.romhenri.minersdream.block;
 
-import net.romhenri.testmod.TestMod;
-import net.romhenri.testmod.item.ModItems;
+import net.romhenri.minersdream.MinersDreamMod;
+import net.romhenri.minersdream.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, MinersDreamMod.MOD_ID);
 
     public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)

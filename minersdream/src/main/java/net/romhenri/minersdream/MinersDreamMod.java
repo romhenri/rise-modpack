@@ -1,8 +1,8 @@
-package net.romhenri.testmod;
+package net.romhenri.minersdream;
 
 import com.mojang.logging.LogUtils;
-import net.romhenri.testmod.item.ModItems;
-import net.romhenri.testmod.block.ModBlocks;
+import net.romhenri.minersdream.item.ModItems;
+import net.romhenri.minersdream.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,12 +17,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(TestMod.MOD_ID)
-public class TestMod {
-    public static final String MOD_ID = "testmod";
+@Mod(MinersDreamMod.MOD_ID)
+public class MinersDreamMod {
+    public static final String MOD_ID = "minersdream";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public TestMod() {
+    public MinersDreamMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
