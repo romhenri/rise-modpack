@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cactus"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "RRR",
+    "GGG"
+  ],
+  "result": {
+    "item": "minersdream:miners_dream"
+  },
+  "show_notification": true
+}

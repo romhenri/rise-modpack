@@ -64,7 +64,6 @@ public class MinersDreamRightClickedOnBlockProcedure {
             );
         }
 
-        // Cobblestone
         serverLevel.getServer().getCommands().performPrefixedCommand(
                 commandSourceStack, cobblestoneCommand
         );
@@ -93,7 +92,7 @@ public class MinersDreamRightClickedOnBlockProcedure {
 
     private static void playFailureSound(LevelAccessor world, int x, int y, int z) {
         if (world instanceof Level level) {
-            SoundEvent failureSound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("yourmod:explosion_failure"));
+            SoundEvent failureSound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode"));
             if (failureSound != null) {
                 if (!level.isClientSide()) {
                     level.playSound(null, new BlockPos(x, y, z), failureSound, SoundSource.NEUTRAL, 1.0F, 1.0F);
@@ -106,8 +105,11 @@ public class MinersDreamRightClickedOnBlockProcedure {
 
     private static void removeItemFromPlayer(Entity entity) {
         if (entity instanceof Player player) {
-            ItemStack minersDreamItem = new ItemStack(MinersDreamItems.MINERS_DREAM.get());
-            player.getInventory().removeItem(minersDreamItem);
+            ItemStack itemInHand = player.getMainHandItem();
+
+            if (itemInHand.getItem() == MinersDreamItems.MINERS_DREAM.get()) {
+                itemInHand.shrink(1);
+            }
         }
     }
 }
