@@ -27,6 +27,7 @@ public class MinersDreamRightClickedOnBlockProcedure {
         }
 
         if (y < 0) { y--; }
+        if (x > 0) { x++; }
 
         Vec3 viewVector = entity.getLookAngle();
         boolean lookingNegativeZ = viewVector.z < 0;
