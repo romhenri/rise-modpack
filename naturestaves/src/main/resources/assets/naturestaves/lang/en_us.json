@@ -1,0 +1,22 @@
+{
+  "item.naturestaves.raw_gem": "Raw Gem",
+  "item.naturestaves.gem": "Gem",
+  "item.naturestaves.calcite_frag": "Calcite",
+
+  "item.naturestaves.red_gem": "Red Gem",
+  "item.naturestaves.green_gem": "Green Gem",
+  "item.naturestaves.blue_gem": "Blue Gem",
+  "item.naturestaves.gray_gem": "Gray Gem",
+  "item.naturestaves.brown_gem": "Brown Gem",
+
+  "item.naturestaves.staff": "Staff",
+  "item.naturestaves.leaves_staff": "Leaves Staff",
+  "item.naturestaves.ground_staff": "Ground Staff",
+  "item.naturestaves.ice_staff": "Ice Staff",
+  "item.naturestaves.magma_staff": "Magma Staff",
+  "item.naturestaves.basalt_staff": "Basalt Staff",
+
+  "block.naturestaves.mineral_ore": "Mineral Ore",
+
+  "creativetab.naturestaves_tab": "Nature Staves"
+}
