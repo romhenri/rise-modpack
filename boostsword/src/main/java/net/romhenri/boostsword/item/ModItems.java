@@ -15,7 +15,7 @@ public class ModItems {
 
     // Boost Sword
     public static final RegistryObject<Item> BOOST_SWORD = ITEMS.register("boost_sword",
-            () -> new BoostSwordItem(Tiers.DIAMOND, 3, -1.6F, new Item.Properties().durability(1561)));
+            () -> new BoostSwordItem(Tiers.DIAMOND, 3, -2.8F, new Item.Properties().durability(1561)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
