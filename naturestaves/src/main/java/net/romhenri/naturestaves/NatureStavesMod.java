@@ -45,9 +45,16 @@ public class NatureStavesMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.STAFF);
+            event.accept(ModItems.CALCITE_FRAG);
             event.accept(ModItems.RAW_GEM);
             event.accept(ModItems.GEM);
-            event.accept(ModItems.CALCITE_FRAG);
+
+            event.accept(ModItems.GREEN_GEM);
+            event.accept(ModItems.RED_GEM);
+            event.accept(ModItems.BLUE_GEM);
+            event.accept(ModItems.BROWN_GEM);
+            event.accept(ModItems.GRAY_GEM);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
@@ -55,7 +62,6 @@ public class NatureStavesMod {
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.STAFF);
             event.accept(ModItems.LEAVES_STAFF);
             event.accept(ModItems.GROUND_STAFF);
             event.accept(ModItems.ICE_STAFF);
