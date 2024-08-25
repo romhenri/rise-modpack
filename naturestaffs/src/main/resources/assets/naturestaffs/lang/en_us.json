@@ -1,0 +1,22 @@
+{
+  "item.naturestaffs.raw_gem": "Raw Gem",
+  "item.naturestaffs.gem": "Gem",
+  "item.naturestaffs.calcite_frag": "Calcite",
+
+  "item.naturestaffs.red_gem": "Red Gem",
+  "item.naturestaffs.green_gem": "Green Gem",
+  "item.naturestaffs.blue_gem": "Blue Gem",
+  "item.naturestaffs.gray_gem": "Gray Gem",
+  "item.naturestaffs.brown_gem": "Brown Gem",
+
+  "item.naturestaffs.staff": "Staff",
+  "item.naturestaffs.leaves_staff": "Leaves Staff",
+  "item.naturestaffs.ground_staff": "Ground Staff",
+  "item.naturestaffs.ice_staff": "Ice Staff",
+  "item.naturestaffs.magma_staff": "Magma Staff",
+  "item.naturestaffs.basalt_staff": "Basalt Staff",
+
+  "block.naturestaffs.mineral_ore": "Mineral Ore",
+
+  "creativetab.naturestaffs_tab": "Nature Staffs"
+}
