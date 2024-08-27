@@ -66,6 +66,7 @@ public class AlexandriteOreMod {
             event.accept(ModItems.ALEXANDRITE_SHOVEL);
             event.accept(ModItems.ALEXANDRITE_AXE);
             event.accept(ModItems.ALEXANDRITE_HOE);
+            event.accept(ModItems.ALEXANDRITE_HAMMER);
         }
     }
 

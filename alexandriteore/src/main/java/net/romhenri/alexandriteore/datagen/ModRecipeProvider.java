@@ -42,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter, AlexandriteOreMod.MOD_ID + ":alexandrite_dust_from_blasting");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.ALEXANDRITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
@@ -52,7 +52,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Alexandrite Sword Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_SWORD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SWORD.get())
                 .pattern(" A ")
                 .pattern(" A ")
                 .pattern(" S ")
@@ -63,7 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Alexandrite Pickaxe Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_PICKAXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_PICKAXE.get())
                 .pattern("AAA")
                 .pattern(" S ")
                 .pattern(" S ")
@@ -74,7 +74,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Alexandrite Axe Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_AXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_AXE.get())
                 .pattern("AA ")
                 .pattern("AS ")
                 .pattern(" S ")
@@ -85,7 +85,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Alexandrite Shovel Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_SHOVEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SHOVEL.get())
                 .pattern(" A ")
                 .pattern(" S ")
                 .pattern(" S ")
@@ -96,9 +96,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         // Alexandrite Hoe Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ALEXANDRITE_HOE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_HOE.get())
                 .pattern("AA ")
                 .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        // Alexandrite Hammer Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_HAMMER.get())
+                .pattern("AAA")
+                .pattern("AAA")
                 .pattern(" S ")
                 .define('A', ModItems.ALEXANDRITE.get())
                 .define('S', Items.STICK)
