@@ -27,8 +27,8 @@ public class ModPlacedFeatures {
 
 
         register(context, ALEXANDRITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ALEXANDRITE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(
-                        1,
+                ModOrePlacement.rareOrePlacement(
+                        5, // 5 in 9 chunks
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-54),
                         VerticalAnchor.absolute(-36)
                 )));

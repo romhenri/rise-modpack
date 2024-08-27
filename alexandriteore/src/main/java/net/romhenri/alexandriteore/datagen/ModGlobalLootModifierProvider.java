@@ -5,8 +5,6 @@ import net.romhenri.alexandriteore.item.ModItems;
 import net.romhenri.alexandriteore.loot.AddItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-//import net.minecraft.world.level.block.Blocks;
-//import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
@@ -24,11 +22,6 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 ModItems.ALEXANDRITE.get())
         );
 
-        add("alexandrite_from_dungeon", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/simple_dungeon")).build() },
-                ModItems.ALEXANDRITE.get())
-        );
-
         add("alexandrite_from_weaponsmith_10", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(
                         new ResourceLocation("chests/village/village_weaponsmith")).build(),
@@ -42,6 +35,5 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.2f).build() },
                 ModItems.ALEXANDRITE.get())
         );
-
     }
 }
