@@ -46,5 +46,3 @@ Works extremely well with Elytra.
     </td>
     </tr>
 </table>
-
-<hr>

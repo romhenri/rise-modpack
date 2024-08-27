@@ -6,12 +6,14 @@
 
 <hr>
 <img width="800" alt="Boost Sword" src="../docs/naturestaffs-banner1.png">
+<hr>
+<img width="800" alt="Boost Sword" src="../docs/naturestaffs-banner2.png">
+<img width="800" alt="Boost Sword" src="../docs/naturestaffs-banner3.png">
 <hr> 
 
 - Light mod with easy installation;
 - Vanilla-like textures and features;
 - Balanced to survival experience.
-
 
 <hr> 
 
@@ -21,6 +23,13 @@ Find Gems in Mineral Ores; <br>
 Make Elemental Gems;<br>
 Make Staffs;<br>
 Use Right Click to Make Plataforms.<br>
+
+<hr>
+
+### Possible Updates
+
+- [x] Material Staffs;
+- [ ] Actions Staffs.
 
 <hr>
 
