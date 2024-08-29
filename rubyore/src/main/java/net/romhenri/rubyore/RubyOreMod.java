@@ -64,7 +64,6 @@ public class RubyOreMod {
             event.accept(ModItems.RUBY_SHOVEL);
             event.accept(ModItems.RUBY_AXE);
             event.accept(ModItems.RUBY_HOE);
-            event.accept(ModItems.RUBY_HAMMER);
         }
     }
 
