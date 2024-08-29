@@ -1,0 +1,19 @@
+{
+  "item.rubyore.ruby": "Ruby",
+  "item.rubyore.raw_ruby": "Raw Ruby",
+  "item.rubyore.ruby_dust": "Ruby Dust",
+
+  "item.rubyore.ruby_axe": "Ruby Axe",
+  "item.rubyore.ruby_hoe": "Ruby Hoe",
+  "item.rubyore.ruby_pickaxe": "Ruby Pickaxe",
+  "item.rubyore.ruby_shovel": "Ruby Shovel",
+  "item.rubyore.ruby_sword": "Ruby Sword",
+  "item.rubyore.ruby_hammer": "Ruby Hammer",
+
+  "block.rubyore.ruby_block": "Block of Ruby",
+
+  "block.rubyore.ruby_ore": "Ruby Ore",
+  "block.rubyore.deepslate_ruby_ore": "Deepslate Ruby Ore",
+
+  "creativetab.ruby_tab": "Ruby"
+}
