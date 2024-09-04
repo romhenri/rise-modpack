@@ -20,6 +20,9 @@ public class MinersDreamItems {
     public static final RegistryObject<Item> MINERS_DREAM = ITEMS.register("miners_dream",
             () -> new MinersDreamItem());
 
+    public static final RegistryObject<Item> NETHER_MINERS_DREAM = ITEMS.register("nether_miners_dream",
+            () -> new NetherMinersDreamItem());
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
@@ -38,6 +41,30 @@ public class MinersDreamItems {
         public InteractionResult useOn(UseOnContext context) {
             super.useOn(context);
             MinersDreamRightClickedOnBlockProcedure.execute(
+                    context.getLevel(),
+                    (int)context.getClickLocation().x(),
+                    (int)context.getClickLocation().y(),
+                    (int)context.getClickLocation().z(),
+                    context.getPlayer()
+            );
+            return InteractionResult.SUCCESS;
+        }
+    }
+
+    public static class NetherMinersDreamItem extends Item {
+        public NetherMinersDreamItem() {
+            super((new Item.Properties()).stacksTo(16).rarity(Rarity.COMMON));
+        }
+
+        @Override
+        public UseAnim getUseAnimation(ItemStack itemstack) {
+            return UseAnim.EAT;
+        }
+
+        @Override
+        public InteractionResult useOn(UseOnContext context) {
+            super.useOn(context);
+            NetherMinersDreamRightClickedOnBlockProcedure.execute(
                     context.getLevel(),
                     (int)context.getClickLocation().x(),
                     (int)context.getClickLocation().y(),
