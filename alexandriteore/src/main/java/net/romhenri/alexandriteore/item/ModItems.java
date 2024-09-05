@@ -26,7 +26,7 @@ public class ModItems {
     public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
             () -> new ShovelItem(ModToolTiers.ALEXANDRITE, (float)1.5, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_AXE = ITEMS.register("alexandrite_axe",
-            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 5, -3.0F, new Item.Properties().durability(1717)));
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 7, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
             () -> new HoeItem(ModToolTiers.ALEXANDRITE, -5, 0, new Item.Properties().durability(1717)));
 

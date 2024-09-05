@@ -23,7 +23,7 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
             () -> new ShovelItem(ModToolTiers.RUBY, (float)2.5, -3.0F, new Item.Properties().durability(2031)));
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
-            () -> new AxeItem(ModToolTiers.RUBY, 5, -3.0F, new Item.Properties().durability(2031)));
+            () -> new AxeItem(ModToolTiers.RUBY, 7, -3.0F, new Item.Properties().durability(2031)));
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
             () -> new HoeItem(ModToolTiers.RUBY, -6, 0, new Item.Properties().durability(2031)));
 
