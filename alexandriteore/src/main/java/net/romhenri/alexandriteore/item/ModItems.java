@@ -33,7 +33,7 @@ public class ModItems {
     public static final RegistryObject<Item> ALEXANDRITE_HAMMER = ITEMS.register("alexandrite_hammer",
             () -> new HammerItem(ModToolTiers.ALEXANDRITE, 1, -2.8F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_COMBAT_AXE = ITEMS.register("alexandrite_combat_axe",
-            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 7, -2.8F, new Item.Properties().durability(1717)));
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 7, -3.0F, new Item.Properties().durability(1717)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

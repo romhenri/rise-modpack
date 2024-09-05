@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_AXE.get());
                         output.accept(ModItems.ALEXANDRITE_HOE.get());
                         output.accept(ModItems.ALEXANDRITE_HAMMER.get());
+                        output.accept(ModItems.ALEXANDRITE_COMBAT_AXE.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
 

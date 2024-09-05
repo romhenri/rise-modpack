@@ -30,6 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALEXANDRITE_AXE);
         handheldItem(ModItems.ALEXANDRITE_HOE);
         handheldItem(ModItems.ALEXANDRITE_HAMMER);
+        handheldItem(ModItems.ALEXANDRITE_COMBAT_AXE);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

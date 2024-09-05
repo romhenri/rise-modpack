@@ -61,12 +61,17 @@ public class AlexandriteOreMod {
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.ALEXANDRITE_SWORD);
             event.accept(ModItems.ALEXANDRITE_PICKAXE);
             event.accept(ModItems.ALEXANDRITE_SHOVEL);
             event.accept(ModItems.ALEXANDRITE_AXE);
             event.accept(ModItems.ALEXANDRITE_HOE);
             event.accept(ModItems.ALEXANDRITE_HAMMER);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.ALEXANDRITE_SWORD);
+            event.accept(ModItems.ALEXANDRITE_AXE);
+            event.accept(ModItems.ALEXANDRITE_COMBAT_AXE);
         }
     }
 
