@@ -2,6 +2,7 @@ package net.romhenri.minersdream.item;
 
 import net.romhenri.minersdream.MinersDreamMod;
 import net.romhenri.minersdream.procedures.MinersDreamRightClickedOnBlockProcedure;
+import net.romhenri.minersdream.procedures.NetherMinersDreamRightClickedOnBlockProcedure;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.ItemStack;
