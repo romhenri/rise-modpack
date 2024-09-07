@@ -38,6 +38,7 @@ public class MinersDreamMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(MinersDreamItems.MINERS_DREAM);
+            event.accept(MinersDreamItems.NETHER_MINERS_DREAM);
         }
     }
 
