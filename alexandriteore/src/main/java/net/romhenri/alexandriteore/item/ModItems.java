@@ -20,20 +20,20 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 3, -1.6F, new Item.Properties().durability(1717)));
+            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 4, -1.6F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, 1, -2.8F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
             () -> new ShovelItem(ModToolTiers.ALEXANDRITE, (float)1.5, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_AXE = ITEMS.register("alexandrite_axe",
-            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 5, -3.0F, new Item.Properties().durability(1717)));
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 6, -3.0F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
             () -> new HoeItem(ModToolTiers.ALEXANDRITE, -5, 0, new Item.Properties().durability(1717)));
 
     public static final RegistryObject<Item> ALEXANDRITE_HAMMER = ITEMS.register("alexandrite_hammer",
-            () -> new HammerItem(ModToolTiers.ALEXANDRITE, 1, -2.8F, new Item.Properties().durability(1717)));
+            () -> new HammerItem(ModToolTiers.ALEXANDRITE, 1, -3.4F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_COMBAT_AXE = ITEMS.register("alexandrite_combat_axe",
-            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 7, -3.0F, new Item.Properties().durability(1717)));
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, 8, -3.4F, new Item.Properties().durability(1717)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

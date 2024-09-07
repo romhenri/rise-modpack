@@ -117,6 +117,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter);
 
+        // Alexandrite Combat Axe Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_COMBAT_AXE.get())
+                .pattern("AAA")
+                .pattern("ASA")
+                .pattern(" S ")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
                 .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .unlockedBy("has_alexandrite_block", inventoryTrigger(ItemPredicate.Builder.item().
