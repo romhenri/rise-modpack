@@ -36,7 +36,7 @@ public class BurneriteMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BURNERITE);
-            event.accept(ModItems.BURNERITE_DUST);
+            event.accept(ModItems.BURNERITE_SCRAP);
         }
 
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

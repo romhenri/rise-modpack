@@ -41,7 +41,6 @@ public class BurneriteAxe extends AxeItem {
                             5, 0.5, 0.5, 0.5, 0.1);
                 }
 
-                // Usar o sistema de som especificado
                 SoundEvent fireSound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("minecraft", "block.lava.extinguish"));
                 if (fireSound != null) {
                     level.playSound(null, pos, fireSound, SoundSource.BLOCKS, 0.3F, 1.8F);

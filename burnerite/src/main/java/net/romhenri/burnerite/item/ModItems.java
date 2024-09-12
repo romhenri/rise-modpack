@@ -18,7 +18,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> BURNERITE = ITEMS.register("burnerite",
             () -> new Item(new Item.Properties().fireResistant()));
-    public static final RegistryObject<Item> BURNERITE_DUST = ITEMS.register("burnerite_dust",
+    public static final RegistryObject<Item> BURNERITE_SCRAP = ITEMS.register("burnerite_scrap",
             () -> new Item(new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> BURNERITE_SWORD = ITEMS.register("burnerite_sword",
