@@ -16,10 +16,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.resources.ResourceLocation;
+
+import java.util.List;
 
 public class BurneriteSword extends SwordItem {
 
@@ -77,6 +81,40 @@ public class BurneriteSword extends SwordItem {
     }
 
     @Override
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (attacker instanceof Player) {
+            target.setSecondsOnFire(5);
+
+            Level world = target.getCommandSenderWorld();
+            if (!world.isClientSide && world instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(ParticleTypes.FLAME, target.getX(), target.getY() + target.getBbHeight() / 2.0, target.getZ(), 10, 0.5, 0.5, 0.5, 0.1);
+            }
+
+            if (target.getHealth() <= 0.0F && target.isOnFire()) {
+                List<ItemEntity> drops = world.getEntitiesOfClass(ItemEntity.class, target.getBoundingBox());
+
+                for (ItemEntity drop : drops) {
+                    ItemStack dropStack = drop.getItem();
+
+                    if (dropStack.getItem() == Items.PORKCHOP) {
+                        drop.setItem(new ItemStack(Items.COOKED_PORKCHOP, dropStack.getCount()));
+                    } else if (dropStack.getItem() == Items.BEEF) {
+                        drop.setItem(new ItemStack(Items.COOKED_BEEF, dropStack.getCount()));
+                    } else if (dropStack.getItem() == Items.CHICKEN) {
+                        drop.setItem(new ItemStack(Items.COOKED_CHICKEN, dropStack.getCount()));
+                    } else if (dropStack.getItem() == Items.MUTTON) {
+                        drop.setItem(new ItemStack(Items.COOKED_MUTTON, dropStack.getCount()));
+                    } else if (dropStack.getItem() == Items.RABBIT) {
+                        drop.setItem(new ItemStack(Items.COOKED_RABBIT, dropStack.getCount()));
+                    }
+                }
+            }
+        }
+
+        return super.hurtEnemy(stack, target, attacker);
+    }
+
+    @Override
     public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int timeLeft) {
     }
 
@@ -89,4 +127,4 @@ public class BurneriteSword extends SwordItem {
     public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.BLOCK;
     }
-};
+}
