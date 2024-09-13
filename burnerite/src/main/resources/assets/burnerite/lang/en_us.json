@@ -1,0 +1,19 @@
+{
+  "item.burnerite.burnerite": "Burnerite",
+  "item.burnerite.raw_burnerite": "Raw Burnerite",
+  "item.burnerite.burnerite_scrap": "Burnerite Scrap",
+
+  "item.burnerite.burnerite_axe": "Burnerite Axe",
+  "item.burnerite.burnerite_hoe": "Burnerite Hoe",
+  "item.burnerite.burnerite_pickaxe": "Burnerite Pickaxe",
+  "item.burnerite.burnerite_shovel": "Burnerite Shovel",
+  "item.burnerite.burnerite_sword": "Burnerite Sword",
+  "item.burnerite.burnerite_hammer": "Burnerite Hammer",
+
+  "block.burnerite.burnerite_block": "Block of Burnerite",
+
+  "block.burnerite.burnerite_ore": "Burnerite",
+  "block.burnerite.deepslate_burnerite_ore": "Deepslate Burnerite",
+
+  "creativetab.burnerite_tab": "Burnerite"
+}

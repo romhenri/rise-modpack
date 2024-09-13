@@ -26,7 +26,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> BURNERITE_ORE = registerBlock("burnerite_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
                     .strength(50f, 1200f)
-                    .requiresCorrectToolForDrops()));
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 15)));
 
     private static final Logger log = LoggerFactory.getLogger(ModBlocks.class);
 
