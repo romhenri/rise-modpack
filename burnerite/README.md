@@ -1,11 +1,10 @@
-<img width="800" alt="Boost Sword Title" src="../_docs/boostsword-title.png">
+<img width="800" alt="Burnerite Title" src="../_docs/burnerite-title.png">
 
-# Boost Sword v1.0.0
-
-> A powerful Sword with <strong>Boost Power</strong>, a unique and fun way to move, travel and escape from difficult situations.
+# Burnerite v1.0.0
+> The classic <strong>Burnerite</strong>, enjoy its power!
 
 <hr>
-<img width="800" alt="Boost Sword" src="../_docs/boostsword-jump-compr.gif">
+<img width="800" alt="Alexandrite Tools" src="../_docs/burnerite-tools.png">
 <hr> 
 
 - Light mod with easy installation;
@@ -13,26 +12,17 @@
 - Balanced to survival experience.
 
 <hr> 
-<img width="800" alt="Boost Sword" src="../_docs/boostsword-view-compr.gif">
-<hr> 
 
 ### Docs n Stats
 
-Find Boost Sword in End treasures; <br>
-Press Right Click and be boosted;<br>
-Damage and Durability equivalent to a diamond sword;<br>
-Works extremely well with Elytra.
+Discover ore between -25 and -49. <br>
+Burnerite is ~ 75% rarer than Diamond. <br>
+Tools craftings are vanilla-like and has block. <br>
 
+Burnerite tools are better stats than Netherite. <br>
+Burnerite durability is equal to Netherite. <br>
+Burnerite can be found in ruined portals and desert dungeon. <br>
 <hr> 
-
-### Possible Updates
-
-- [x] Boost Sword;
-- [ ] Low Boost Sword;
-
-<hr>
-
-### Author
 
 ### Author
 

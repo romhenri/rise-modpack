@@ -1,10 +1,10 @@
-<img width="800" alt="Ruby Title" src="../docs/ruby-title.png">
+<img width="800" alt="Ruby Title" src="../_docs/ruby-title.png">
 
 # Ruby Ore v1.0.0
 > The classic <strong>Ruby Ore</strong>, enjoy its power!
 
 <hr>
-<img width="800" alt="Alexandrite Tools" src="../docs/ruby-tools.png">
+<img width="800" alt="Alexandrite Tools" src="../_docs/ruby-tools.png">
 <hr> 
 
 - Light mod with easy installation;
@@ -24,19 +24,27 @@ Ruby durability is equal to Netherite. <br>
 Ruby can be found in ruined portals and desert dungeon. <br>
 <hr> 
 
-### Desenvolvedores
+### Author
 
 <table>
   <tr>
     <td align="center">
       <a href="https://github.com/romhenri">
-        <img src="https://avatars.githubusercontent.com/u/123867521?v=4" width="100px;" alt="Foto do Romulo Henri no GitHub"/><br>
-        <sub>
+        <img src="https://avatars.githubusercontent.com/u/123867521?v=4" width="200px;" alt="Foto do Romulo Henri no GitHub"/><br>
+        <p>
           <b>Rômulo Henri</b>
-        </sub>
+        </p>
       </a>
     </td>
-    </tr>
+    <td align="center">
+        <p>
+          Mod that is part of the "Rise: Ores n Magic" Modpack, developed by me in both code and art.
+         <br> 
+          Available at
+          <a href="https://www.curseforge.com/minecraft/modpacks/rise-modpack" target="_blank">CurseForge</a>
+          </p> 
+        <sub>(Since 2024)</sub>
+    </td>
+  </tr>
 </table>
-
 <hr>
