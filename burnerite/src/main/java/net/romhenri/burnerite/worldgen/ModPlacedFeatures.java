@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, BURNERITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_BURNERITE_ORE_KEY),
-                ModOrePlacement.rareOrePlacement(
+                ModOrePlacement.singleRareOrePlacement(
                         2, // 2 in 3
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(8), VerticalAnchor.absolute(16))
                 ));
