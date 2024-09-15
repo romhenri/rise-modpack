@@ -29,7 +29,7 @@ public class ModItems {
                     .durability(741)
             ));
     public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe",
-            () -> new AxeItem(ModToolTiers.PLATINUM, 8, -3.0F, new Item.Properties()
+            () -> new AxeItem(ModToolTiers.PLATINUM, 8  , -3.0F, new Item.Properties()
                     .durability(741)
             ));
     public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe",
