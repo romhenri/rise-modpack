@@ -1,0 +1,19 @@
+{
+  "item.platinum.platinum": "Platinum",
+  "item.platinum.raw_platinum": "Raw Platinum",
+  "item.platinum.platinum_nugget": "Platinum Scrap",
+
+  "item.platinum.platinum_axe": "Platinum Axe",
+  "item.platinum.platinum_hoe": "Platinum Hoe",
+  "item.platinum.platinum_pickaxe": "Platinum Pickaxe",
+  "item.platinum.platinum_shovel": "Platinum Shovel",
+  "item.platinum.platinum_sword": "Platinum Sword",
+  "item.platinum.platinum_hammer": "Platinum Hammer",
+
+  "block.platinum.platinum_block": "Block of Platinum",
+
+  "block.platinum.platinum_ore": "Platinum",
+  "block.platinum.deepslate_platinum_ore": "Deepslate Platinum",
+
+  "creativetab.platinum_tab": "Platinum"
+}
