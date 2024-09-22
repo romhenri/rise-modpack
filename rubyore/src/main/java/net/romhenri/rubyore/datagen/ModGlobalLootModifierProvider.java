@@ -21,12 +21,5 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build() },
                 ModItems.RUBY.get())
         );
-
-        add("ruby_from_ruined_portal_20", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(
-                        new ResourceLocation("chests/ruined_portal")).build(),
-                LootItemRandomChanceCondition.randomChance(0.2f).build() },
-                ModItems.RUBY.get())
-        );
     }
 }
