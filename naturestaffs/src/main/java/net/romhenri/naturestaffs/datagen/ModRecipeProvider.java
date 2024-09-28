@@ -140,6 +140,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Blocks.BASALT)
                 .unlockedBy("has_staff", has(ModItems.STAFF.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SLIME_STAFF.get())
+                .pattern("LLG")
+                .pattern("LSL")
+                .pattern("LLL")
+                .define('S', ModItems.STAFF.get())
+                .define('G', ModItems.GEM.get())
+                .define('L', Items.SLIME_BLOCK)
+                .unlockedBy("has_staff", has(ModItems.STAFF.get()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

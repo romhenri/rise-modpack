@@ -11,6 +11,7 @@ import net.romhenri.naturestaffs.item.custom.MagmaStaffItem;
 import net.romhenri.naturestaffs.item.custom.GroundStaffItem;
 import net.romhenri.naturestaffs.item.custom.LeavesStaffItem;
 import net.romhenri.naturestaffs.item.custom.BasaltStaffItem;
+import net.romhenri.naturestaffs.item.custom.SlimeStaffItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -48,6 +49,8 @@ public class ModItems {
             () -> new MagmaStaffItem(new Item.Properties().durability(96)));
     public static final RegistryObject<Item> BASALT_STAFF = ITEMS.register("basalt_staff",
             () -> new BasaltStaffItem(new Item.Properties().durability(96)));
+    public static final RegistryObject<Item> SLIME_STAFF = ITEMS.register("slime_staff",
+            () -> new SlimeStaffItem(new Item.Properties().durability(31)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
