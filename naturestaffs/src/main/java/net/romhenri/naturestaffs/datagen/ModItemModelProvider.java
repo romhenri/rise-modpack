@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ICE_STAFF);
         handheldItem(ModItems.MAGMA_STAFF);
         handheldItem(ModItems.BASALT_STAFF);
+        handheldItem(ModItems.SLIME_STAFF);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

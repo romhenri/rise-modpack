@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ICE_STAFF.get());
                         output.accept(ModItems.MAGMA_STAFF.get());
                         output.accept(ModItems.BASALT_STAFF.get());
+                        output.accept(ModItems.SLIME_STAFF.get());
 
                         output.accept(ModBlocks.MINERAL_ORE.get());
                     }).build());
