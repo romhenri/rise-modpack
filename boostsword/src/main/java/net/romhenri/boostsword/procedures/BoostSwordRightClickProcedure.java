@@ -26,7 +26,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BoostSwordRightClickProcedure {
-    public static void execute(LevelAccessor world, int x, int y, int z, int cooldown, Entity entity) {
+    public static void execute(LevelAccessor world, int x, int y, int z, int cooldown, Entity entity, double force) {
         if (entity == null) return;
 
         if (entity instanceof Player player) {
@@ -39,7 +39,7 @@ public class BoostSwordRightClickProcedure {
 
         entity.getPersistentData().putBoolean("User3", true);
 
-        Vec3 newPosition = entity.getLookAngle().scale(3.0).add(entity.getDeltaMovement().scale(1.0));
+        Vec3 newPosition = entity.getLookAngle().scale(force).add(entity.getDeltaMovement().scale(1.0));
         entity.setDeltaMovement(newPosition);
 
         if (world instanceof ServerLevel serverLevel) {
@@ -72,7 +72,7 @@ public class BoostSwordRightClickProcedure {
         for (Entity entityIterator : entitiesFound) {
             if (!entityIterator.getPersistentData().getBoolean("User3")) {
                 entityIterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)),
-                        (float) Mth.nextInt(RandomSource.create(), 6, 10));
+                        (float) Mth.nextInt(RandomSource.create(), (int) (force * 2), (int) (force * 4)));
             }
         }
 

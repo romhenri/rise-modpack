@@ -17,15 +17,13 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> ALEXANDRITE_SMELTABLES = List.of(
-    );
-
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

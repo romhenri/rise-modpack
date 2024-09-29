@@ -13,8 +13,13 @@ import net.romhenri.boostsword.procedures.BoostSwordRightClickProcedure;
 
 public class BoostSwordItem extends SwordItem {
 
-    public BoostSwordItem(Tier tier, int attackDamageIn, float attackSpeedIn, Item.Properties properties) {
+    private final int cooldown;
+    private final double force;
+
+    public BoostSwordItem(Tier tier, int attackDamageIn, float attackSpeedIn, Item.Properties properties, int cooldown, double force) {
         super(tier, attackDamageIn, attackSpeedIn, properties);
+        this.cooldown = cooldown;
+        this.force = force;
     }
 
     @Override
@@ -23,11 +28,12 @@ public class BoostSwordItem extends SwordItem {
 
         BoostSwordRightClickProcedure.execute(
                 (LevelAccessor) world,
-                (int)player.getX(),
-                (int)player.getY(),
-                (int)player.getZ(),
-                30,
-                player
+                (int) player.getX(),
+                (int) player.getY(),
+                (int) player.getZ(),
+                this.cooldown,
+                player,
+                this.force
         );
 
         return InteractionResultHolder.pass(itemStack);
