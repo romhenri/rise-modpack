@@ -35,6 +35,40 @@ public class ModItems {
                     1.5
             ));
 
+    // Delta Boost Sword
+    public static final RegistryObject<Item> DELTA_BOOST_SWORD = ITEMS.register("delta_boost_sword",
+            () -> new BoostSwordItem(
+                    Tiers.DIAMOND,
+                    3,
+                    -2.4F,
+                    new Item.Properties().durability(1561),
+                    10,
+                    1.5
+            ));
+
+
+    // Epsilon Boost Sword
+    public static final RegistryObject<Item> EPSILON_BOOST_SWORD = ITEMS.register("epsilon_boost_sword",
+            () -> new BoostSwordItem(
+                    Tiers.DIAMOND,
+                    3,
+                    -2.4F,
+                    new Item.Properties().durability(1561),
+                    15,
+                    3
+            ));
+
+    // Zeta Boost Sword
+    public static final RegistryObject<Item> ZETA_BOOST_SWORD = ITEMS.register("zeta_boost_sword",
+            () -> new BoostSwordItem(
+                    Tiers.DIAMOND,
+                    3,
+                    -2.4F,
+                    new Item.Properties().durability(1561),
+                    30,
+                    6
+            ));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

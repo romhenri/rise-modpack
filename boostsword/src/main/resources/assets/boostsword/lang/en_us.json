@@ -1,4 +1,8 @@
 {
-  "item.boostsword.boost_sword": "Boost Sword",
+  "item.boostsword.alpha_boost_sword": "Alpha Boost Sword",
+  "item.boostsword.beta_boost_sword": "Beta Boost Sword",
+  "item.boostsword.delta_boost_sword": "Delta Boost Sword",
+  "item.boostsword.epsilon_boost_sword": "Epsilon Boost Sword",
+  "item.boostsword.zeta_boost_sword": "Zeta Boost Sword",
   "creativetab.boost_sword_tab": "Boost Sword"
 }

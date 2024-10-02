@@ -44,6 +44,12 @@ public class BoostSword {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.ALPHA_BOOST_SWORD);
+            event.accept(ModItems.BETA_BOOST_SWORD);
+            event.accept(ModItems.DELTA_BOOST_SWORD);
+            event.accept(ModItems.ZETA_BOOST_SWORD);
+        }
     }
 
     @SubscribeEvent

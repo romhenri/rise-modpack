@@ -18,7 +18,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        handheldItem(ModItems.BOOST_SWORD);
+        handheldItem(ModItems.ALPHA_BOOST_SWORD);
+        handheldItem(ModItems.BETA_BOOST_SWORD);
+        handheldItem(ModItems.DELTA_BOOST_SWORD);
+        handheldItem(ModItems.EPSILON_BOOST_SWORD);
+        handheldItem(ModItems.ZETA_BOOST_SWORD);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

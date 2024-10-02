@@ -17,11 +17,40 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        LootItemCondition[] conditions = new LootItemCondition[]{
+        // ALPHA_BOOST_SWORD
+        LootItemCondition[] alphaConditions = new LootItemCondition[]{
                 LootTableIdCondition.builder(new ResourceLocation("minecraft", "chests/end_city_treasure")).build(),
                 LootItemRandomChanceCondition.randomChance(0.3f).build()
         };
 
-        add("boost_sword_in_end_city", new AddItemModifier(conditions, ModItems.BOOST_SWORD.get()));
+        // BETA_BOOST_SWORD
+        LootItemCondition[] betaConditions = new LootItemCondition[]{
+                LootTableIdCondition.builder(new ResourceLocation("minecraft", "chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.4f).build()
+        };
+
+        // DELTA_BOOST_SWORD
+        LootItemCondition[] deltaConditions = new LootItemCondition[]{
+                LootTableIdCondition.builder(new ResourceLocation("minecraft", "chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        };
+
+        // EPSILON_BOOST_SWORD
+        LootItemCondition[] epsilonConditions = new LootItemCondition[]{
+                LootTableIdCondition.builder(new ResourceLocation("minecraft", "chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.2f).build()
+        };
+
+        // ZETA_BOOST_SWORD
+        LootItemCondition[] zetaConditions = new LootItemCondition[]{
+                LootTableIdCondition.builder(new ResourceLocation("minecraft", "chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()
+        };
+
+        add("alpha_boost_sword_in_end_city", new AddItemModifier(alphaConditions, ModItems.ALPHA_BOOST_SWORD.get()));
+        add("beta_boost_sword_in_end_city", new AddItemModifier(betaConditions, ModItems.BETA_BOOST_SWORD.get()));
+        add("delta_boost_sword_in_end_city", new AddItemModifier(deltaConditions, ModItems.DELTA_BOOST_SWORD.get()));
+        add("epsilon_boost_sword_in_end_city", new AddItemModifier(epsilonConditions, ModItems.EPSILON_BOOST_SWORD.get()));
+        add("zeta_boost_sword_in_end_city", new AddItemModifier(zetaConditions, ModItems.ZETA_BOOST_SWORD.get()));
     }
 }
