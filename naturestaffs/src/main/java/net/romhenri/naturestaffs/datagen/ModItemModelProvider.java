@@ -22,7 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GEM);
         simpleItem(ModItems.CALCITE_FRAG);
 
-        simpleItem(ModItems.RED_GEM);
+        simpleItem(ModItems.IGNIS_GEM);
         simpleItem(ModItems.BLUE_GEM);
         simpleItem(ModItems.GREEN_GEM);
         simpleItem(ModItems.GRAY_GEM);

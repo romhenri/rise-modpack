@@ -62,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.WATER_BUCKET)
                 .unlockedBy("has_gem", has(ModItems.GEM.get()))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_GEM.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IGNIS_GEM.get())
                 .pattern("BMB")
                 .pattern("MGM")
                 .pattern("BMB")
@@ -128,7 +128,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" MG")
                 .pattern(" SM")
                 .define('S', ModItems.STAFF.get())
-                .define('G', ModItems.RED_GEM.get())
+                .define('G', ModItems.IGNIS_GEM.get())
                 .define('M', Blocks.MAGMA_BLOCK)
                 .unlockedBy("has_staff", has(ModItems.STAFF.get()))
                 .save(pWriter);

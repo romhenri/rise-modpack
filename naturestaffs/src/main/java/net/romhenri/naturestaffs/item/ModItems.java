@@ -25,7 +25,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // Gems
-    public static final RegistryObject<Item> RED_GEM = ITEMS.register("red_gem",
+    public static final RegistryObject<Item> IGNIS_GEM = ITEMS.register("ignis_gem",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BLUE_GEM = ITEMS.register("blue_gem",
             () -> new Item(new Item.Properties()));

@@ -22,7 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GEM.get());
                         output.accept(ModItems.CALCITE_FRAG.get());
 
-                        output.accept(ModItems.RED_GEM.get());
+                        output.accept(ModItems.IGNIS_GEM.get());
                         output.accept(ModItems.BLUE_GEM.get());
                         output.accept(ModItems.GREEN_GEM.get());
                         output.accept(ModItems.GRAY_GEM.get());

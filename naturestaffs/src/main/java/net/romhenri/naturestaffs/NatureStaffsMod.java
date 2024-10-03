@@ -51,7 +51,7 @@ public class NatureStaffsMod {
             event.accept(ModItems.GEM);
 
             event.accept(ModItems.GREEN_GEM);
-            event.accept(ModItems.RED_GEM);
+            event.accept(ModItems.IGNIS_GEM);
             event.accept(ModItems.BLUE_GEM);
             event.accept(ModItems.BROWN_GEM);
             event.accept(ModItems.GRAY_GEM);
