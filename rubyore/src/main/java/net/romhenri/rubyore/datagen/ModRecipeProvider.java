@@ -105,6 +105,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.RUBY.get()).build()))
                 .save(pWriter);
 
+        // Ruby Hammer Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_HAMMER.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern(" S ")
+                .define('A', ModItems.RUBY.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.RUBY.get()).build()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy("has_ruby_block", inventoryTrigger(ItemPredicate.Builder.item().

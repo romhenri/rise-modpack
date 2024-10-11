@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.romhenri.rubyore.item.custom.HammerItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -26,6 +27,9 @@ public class ModItems {
             () -> new AxeItem(ModToolTiers.RUBY, 7, -3.0F, new Item.Properties().durability(2031)));
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
             () -> new HoeItem(ModToolTiers.RUBY, -6, 0, new Item.Properties().durability(2031)));
+
+    public static final RegistryObject<Item> RUBY_HAMMER = ITEMS.register("ruby_hammer",
+            () -> new HammerItem(ModToolTiers.RUBY, 2, -3.4F, new Item.Properties().durability(2031)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
