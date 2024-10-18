@@ -27,6 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.RUBY_AXE);
         handheldItem(ModItems.RUBY_HOE);
         handheldItem(ModItems.RUBY_HAMMER);
+        handheldItem(ModItems.RUBY_COMBAT_AXE);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

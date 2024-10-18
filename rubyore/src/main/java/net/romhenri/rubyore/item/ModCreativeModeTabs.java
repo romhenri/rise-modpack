@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_AXE.get());
                         output.accept(ModItems.RUBY_HOE.get());
                         output.accept(ModItems.RUBY_HAMMER.get());
+                        output.accept(ModItems.RUBY_COMBAT_AXE.get());
 
                         output.accept(ModBlocks.RUBY_BLOCK.get());
 

@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.romhenri.alexandriteore.item.custom.HammerItem;
+import net.romhenri.alexandriteore.block.ModBlocks;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -34,6 +35,9 @@ public class ModItems {
             () -> new HammerItem(ModToolTiers.ALEXANDRITE, 1, -3.4F, new Item.Properties().durability(1717)));
     public static final RegistryObject<Item> ALEXANDRITE_COMBAT_AXE = ITEMS.register("alexandrite_combat_axe",
             () -> new AxeItem(ModToolTiers.ALEXANDRITE, 8, -3.4F, new Item.Properties().durability(1717)));
+
+    public static final RegistryObject<Item> ALEXANDRITE_TORCH_ITEM = ITEMS.register("alexandrite_torch_item",
+            () -> new BlockItem(ModBlocks.ALEXANDRITE_TORCH.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

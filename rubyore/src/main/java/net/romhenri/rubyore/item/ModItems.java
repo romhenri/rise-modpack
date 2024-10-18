@@ -30,6 +30,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> RUBY_HAMMER = ITEMS.register("ruby_hammer",
             () -> new HammerItem(ModToolTiers.RUBY, 2, -3.4F, new Item.Properties().durability(2031)));
+    public static final RegistryObject<Item> RUBY_COMBAT_AXE = ITEMS.register("ruby_combat_axe",
+            () -> new AxeItem(ModToolTiers.RUBY, 9, -3.4F, new Item.Properties().durability(1717)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

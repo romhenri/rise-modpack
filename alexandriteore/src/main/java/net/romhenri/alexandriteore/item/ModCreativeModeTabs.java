@@ -31,6 +31,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_COMBAT_AXE.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.CHISELED_STONE_BRICKS.get());
+                        output.accept(ModBlocks.CHISELED_DEEPSLATE_BRICKS.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());

@@ -31,6 +31,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALEXANDRITE_HOE);
         handheldItem(ModItems.ALEXANDRITE_HAMMER);
         handheldItem(ModItems.ALEXANDRITE_COMBAT_AXE);
+
+        torchItem(ModItems.ALEXANDRITE_TORCH_ITEM);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
@@ -39,15 +41,19 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(AlexandriteOreMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(AlexandriteOreMod.MOD_ID,"item/" + item.getId().getPath()));
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation(AlexandriteOreMod.MOD_ID, "block/" + block.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(AlexandriteOreMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder torchItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(), "item/generated")
+                .texture("layer0", new ResourceLocation(AlexandriteOreMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

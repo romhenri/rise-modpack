@@ -53,6 +53,9 @@ public class AlexandriteOreMod {
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.CHISELED_STONE_BRICKS);
+            event.accept(ModBlocks.CHISELED_DEEPSLATE_BRICKS);
+//            event.accept(ModBlocks.ALEXANDRITE_TORCH);
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

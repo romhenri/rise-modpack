@@ -1,6 +1,8 @@
 package net.romhenri.alexandriteore.datagen;
 
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.fml.common.Mod;
 import net.romhenri.alexandriteore.AlexandriteOreMod;
 import net.romhenri.alexandriteore.block.ModBlocks;
 import net.romhenri.alexandriteore.item.ModItems;
@@ -124,6 +126,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('A', ModItems.ALEXANDRITE.get())
                 .define('S', Items.STICK)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_STONE_BRICKS.get())
+                .pattern("SSS")
+                .pattern("SAS")
+                .pattern("SSS")
+                .define('S', Blocks.STONE_BRICKS)
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DEEPSLATE_BRICKS.get())
+                .pattern("SSS")
+                .pattern("SAS")
+                .pattern("SSS")
+                .define('S', Blocks.DEEPSLATE_BRICKS)
+                .define('A', ModItems.ALEXANDRITE.get())
                 .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter);

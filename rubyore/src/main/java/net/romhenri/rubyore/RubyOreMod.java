@@ -58,12 +58,18 @@ public class RubyOreMod {
             event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
         }
 
-        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.RUBY_SWORD);
-            event.accept(ModItems.RUBY_PICKAXE);
+            event.accept(ModItems.RUBY_AXE);
+            event.accept(ModItems.RUBY_COMBAT_AXE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.RUBY_SHOVEL);
+            event.accept(ModItems.RUBY_PICKAXE);
             event.accept(ModItems.RUBY_AXE);
             event.accept(ModItems.RUBY_HOE);
+            event.accept(ModItems.RUBY_HAMMER);
         }
     }
 
